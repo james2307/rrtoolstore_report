@@ -12,13 +12,6 @@ def main():
         layout="wide"
     )
 
-    hide_github_icon = """
-    #GithubIcon {
-      visibility: hidden;
-    }
-    """
-    st.markdown(hide_github_icon, unsafe_allow_html=True)
-
     # Initialize session state
     if 'processed_data' not in st.session_state:
         st.session_state.processed_data = None
