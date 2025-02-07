@@ -38,10 +38,6 @@ def check_password():
 if not check_password():
     st.stop()  # Do not continue if check_password is not True.
 
-# Main Streamlit app starts here
-st.write("Here goes your normal Streamlit app...")
-st.button("Click me")
-
 def main():
 
     # Initialize session state
