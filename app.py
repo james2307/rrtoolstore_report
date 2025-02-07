@@ -6,6 +6,11 @@ from utils import validate_csv_file, get_download_link
 
 import hmac
 
+st.set_page_config(
+    page_title="Transaction Data Processor",
+    page_icon="💳",
+    layout="wide"
+)
 
 def check_password():
     """Returns `True` if the user had the correct password."""
@@ -30,7 +35,6 @@ def check_password():
         st.error("😕 Password incorrect")
     return False
 
-
 if not check_password():
     st.stop()  # Do not continue if check_password is not True.
 
@@ -39,12 +43,6 @@ st.write("Here goes your normal Streamlit app...")
 st.button("Click me")
 
 def main():
-  
-    st.set_page_config(
-        page_title="Transaction Data Processor",
-        page_icon="💳",
-        layout="wide"
-    )
 
     # Initialize session state
     if 'processed_data' not in st.session_state:
