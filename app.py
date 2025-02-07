@@ -4,19 +4,20 @@ from data_processor import (process_paytm_data, process_razorpay_data,
                           process_shopify_data, match_orders, combine_and_format_data)
 from utils import validate_csv_file, get_download_link
 
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
-
 def main():
+  
     st.set_page_config(
         page_title="Transaction Data Processor",
         page_icon="💳",
         layout="wide"
     )
+
+    hide_github_icon = """
+    #GithubIcon {
+      visibility: hidden;
+    }
+    """
+    st.markdown(hide_github_icon, unsafe_allow_html=True)
 
     # Initialize session state
     if 'processed_data' not in st.session_state:
